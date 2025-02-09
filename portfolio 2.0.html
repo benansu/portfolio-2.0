@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Créateur de Contenu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FFB866, #5DDC82);
+            color: #333;
+            text-align: center;
+        }
+
+        /* ---- HEADER ---- */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        /* ---- NAVIGATION ---- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #1e90ff;
+        }
+
+        /* ---- SECTIONS ---- */
+        .container {
+            padding: 40px 20px;
+        }
+
+        .accueil-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .accueil-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        /* ---- LOGO ---- */
+        .accueil-content .logo {
+            display: block;
+            border-radius: o;
+            box-shadow: none;
+            filter: none;
+            transition: none;
+            transform: none;
+        }
+
+        /* ---- IMAGE ---- */
+
+        .accueil-content img {
+            border-radius: 15px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .accueil-content img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .accueil-content .logo:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* ---- BOUTON ME TROUVER ---- */
+        .btn-trouver {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-trouver:hover {
+            background: #1476d1;
+        }
+
+        /* ---- PORTFOLIO ---- */
+        .portfolio-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-item img, .portfolio-item iframe {
+            width: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ---- VIDÉO YOUTUBE ---- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ---- FORMULAIRE ---- */
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #1476d1;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            bottom: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: #1e90ff;
+            margin: 0 10px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        .credits {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://formspree.io/f/myzkpleo" method="POST">
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+    
+        <label for="message">Message</label>
+        <textarea name="message" required></textarea>
+    
+        <button type="submit">Envoyer</button>
+    </form>
+    
+
+    <header>
+        <h1>BENANSU 509</h1>
+        <p>Créateur de Contenu</p>
+    </header>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- Section Accueil -->
+        <section id="accueil">
+            <div class="accueil-content">
+                <!-- Logo tout en haut -->
+                <img src="benansu logo color copy.png" alt="Mon Logo" class="logo">
+                <!-- Photo et texte -->
+                <img src="benansu 2.0 (2).jpg" alt="Ma Photo">
+                <h2>Bienvenue sur mon portfolio !</h2>
+                <p>Je suis BENANSU 509. Je suis céateur de contenu. Je suis egalement monteur, graphiste et un passionné de la videographie.</p>
+                <a href="https://youtube.com/@benansu509?si=UAVGTZBzOmBh6_VP " class="btn-trouver" target="_blank">Me Trouver</a>
+            </div>
+        </section>
+
+        <!-- Section Portfolio -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <img src="OIP (2).jfif" alt="Projet 1">
+                <h3>Monteur video</h3>
+                <p>Maitriser et presenter des tutoriels sur capcut.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="photoshop.png" alt="Projet 2">
+                <h3>graphiste</h3>
+                <p>Faire de l'infographie et des miniatures sur photoshop.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Vidéo Présentation</h3>
+                <p>connait le montage video avec moi</p>
+                <div class="video-container">
+                    <iframe src="https://youtu.be/Qx1HK-SQLfY?si=oaTqFCzArfEeXX0g" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/myzkpleo" method="POST">
+                    <input type="text" name="nom" placeholder="Nom" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Lien vers Instagram">Instagram</a>
+            <a href="#" aria-label="https://youtube.com/@benansu509?si=UAVGTZBzOmBh6_VP ">YouTube</a>
+            <a href="#" aria-label="Lien vers LinkedIn">LinkedIn</a>
+        </div>
+        <div class="credits">
+            <p>Conçu avec ❤️ par [Ton Nom]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
